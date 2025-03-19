@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-20T01:38:26.284510" rpa="false" schemaversion="5">
+<suite id="s1" name="Dataset" source="F:\Test project\DataDriven\dataset.robot">
+<test id="s1-t1" name="Invalid email" line="18">
+<kw name="open the browser with the Mortagage payment url" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:26.587652" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-20T01:38:26.587506" elapsed="1.423096"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:28.010972" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-20T01:38:28.010809" elapsed="0.597383"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-20T01:38:28.608392" elapsed="0.035641"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:26.586984" elapsed="2.057159"/>
+</kw>
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortagage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:28.645328" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-20T01:38:28.645201" elapsed="1.572255"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:30.218024" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-20T01:38:30.217728" elapsed="0.653972"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-20T01:38:30.872122" elapsed="0.036169"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:28.644999" elapsed="2.263419"/>
+</kw>
+<kw name="Fill the Loging form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:30.909275" level="INFO">Typing text 'djaiierht' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${userId}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:30.908915" elapsed="0.155720"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:31.065597" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-03-20T01:38:31.102884" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:31.064884" elapsed="0.080351"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:31.145540" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:31.145390" elapsed="0.066899"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-20T01:38:30.908595" elapsed="0.303794"/>
+</kw>
+<kw name="wait until Element is located in the page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T01:38:31.212863" elapsed="2.130977"/>
+</kw>
+<arg>${Error_Message_Login}</arg>
+<status status="PASS" start="2025-03-20T01:38:31.212526" elapsed="2.131486"/>
+</kw>
+<kw name="verify error message is correct">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:33.344693" level="INFO">Verifying element 'css:.alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${Error_Message_Login}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-20T01:38:33.344489" elapsed="0.018343"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:33.344213" elapsed="0.018727"/>
+</kw>
+<arg>djaiierht</arg>
+<arg>learning</arg>
+<status status="PASS" start="2025-03-20T01:38:28.644576" elapsed="4.718413"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-20T01:38:33.363413" elapsed="2.205432"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:26.586268" elapsed="8.983269"/>
+</test>
+<test id="s1-t2" name="Invalid password" line="19">
+<kw name="open the browser with the Mortagage payment url" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:35.572275" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-20T01:38:35.572090" elapsed="1.395296"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:36.967830" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-20T01:38:36.967614" elapsed="0.578774"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-20T01:38:37.546608" elapsed="0.040537"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:35.571691" elapsed="2.015584"/>
+</kw>
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortagage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:37.588383" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-20T01:38:37.588280" elapsed="1.685581"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:39.274389" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-20T01:38:39.274138" elapsed="0.483339"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-20T01:38:39.757945" elapsed="0.274347"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:37.588093" elapsed="2.444597"/>
+</kw>
+<kw name="Fill the Loging form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:40.035278" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${userId}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:40.034767" elapsed="0.562981"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:40.601315" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-03-20T01:38:40.759735" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:40.599416" elapsed="0.441984"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:41.042675" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:41.042063" elapsed="0.269842"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-20T01:38:40.033714" elapsed="1.278713"/>
+</kw>
+<kw name="wait until Element is located in the page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T01:38:41.314588" elapsed="2.090159"/>
+</kw>
+<arg>${Error_Message_Login}</arg>
+<status status="PASS" start="2025-03-20T01:38:41.313236" elapsed="2.091660"/>
+</kw>
+<kw name="verify error message is correct">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:43.405515" level="INFO">Verifying element 'css:.alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${Error_Message_Login}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-20T01:38:43.405324" elapsed="0.030751"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:43.405076" elapsed="0.031436"/>
+</kw>
+<arg>rahulshettyacademy</arg>
+<arg>12344jfa</arg>
+<status status="PASS" start="2025-03-20T01:38:37.587762" elapsed="5.848866"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-20T01:38:43.437187" elapsed="3.728665"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:35.571084" elapsed="11.595126"/>
+</test>
+<test id="s1-t3" name="Invalid Syntext" line="20">
+<kw name="open the browser with the Mortagage payment url" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:47.168192" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-20T01:38:47.168005" elapsed="1.772387"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:48.941533" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-20T01:38:48.940940" elapsed="0.773090"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-20T01:38:49.714871" elapsed="0.041995"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:47.167629" elapsed="2.589525"/>
+</kw>
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortagage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:49.759590" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-20T01:38:49.759300" elapsed="2.268384"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:52.029093" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-20T01:38:52.028450" elapsed="0.754795"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-20T01:38:52.783885" elapsed="0.055722"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:49.758772" elapsed="3.081109"/>
+</kw>
+<kw name="Fill the Loging form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:52.841696" level="INFO">Typing text '£2%?' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${userId}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:52.841175" elapsed="0.268947"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:53.110999" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-03-20T01:38:53.222160" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:53.110504" elapsed="0.324715"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:53.436338" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T01:38:53.435731" elapsed="0.207499"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-20T01:38:52.840289" elapsed="0.803228"/>
+</kw>
+<kw name="wait until Element is located in the page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T01:38:53.644899" elapsed="2.129059"/>
+</kw>
+<arg>${Error_Message_Login}</arg>
+<status status="PASS" start="2025-03-20T01:38:53.643996" elapsed="2.130114"/>
+</kw>
+<kw name="verify error message is correct">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-20T01:38:55.774924" level="INFO">Verifying element 'css:.alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${Error_Message_Login}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-20T01:38:55.774646" elapsed="0.066271"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:55.774306" elapsed="0.066756"/>
+</kw>
+<arg>£2%?</arg>
+<arg>learning</arg>
+<status status="PASS" start="2025-03-20T01:38:49.757953" elapsed="6.083182"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-20T01:38:55.841861" elapsed="2.246799"/>
+</kw>
+<status status="PASS" start="2025-03-20T01:38:47.167094" elapsed="10.921824"/>
+</test>
+<doc>To validate the Login form</doc>
+<status status="PASS" start="2025-03-20T01:38:26.285793" elapsed="31.804155"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Dataset" id="s1" pass="3" fail="0" skip="0">Dataset</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
