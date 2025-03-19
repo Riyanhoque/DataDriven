@@ -3,14 +3,14 @@ Documentation    To validate the Login form
 Library    SeleniumLibrary
 Test Setup        open the browser with the Mortagage payment url
 Test Teardown        Close Browser
-# Resource        resource.robot
+Resource        resource.robot
 Test Template    Validate UnSuccesful Login 
 
 
 *** Variables ***
 ${Error_Message_Login}        css:.alert-danger
 ${Page}                       css:.nav-link
-${Url}        https://rahulshettyacademy.com/loginpagePractise/
+
 
 
 
@@ -35,11 +35,6 @@ Validate UnSuccesful Login
 #     wait until Element is located in the page    ${Page}
 
 
-open the browser with the Mortagage payment url 
-    Create Webdriver    Chrome
-    Go To    ${Url}
-    Maximize Browser Window
-    
 Fill the Loging form
     [Arguments]       ${userId}       ${password}   
     Input Text        id:username    ${userId}
