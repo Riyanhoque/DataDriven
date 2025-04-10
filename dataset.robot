@@ -5,6 +5,7 @@ Test Setup        open the browser with the Mortagage payment url
 Test Teardown        Close Browser
 Resource        resource.robot
 Test Template    Validate UnSuccesful Login 
+Library        DataDriver 
 
 
 *** Variables ***
@@ -18,7 +19,7 @@ ${Page}                       css:.nav-link
 Invalid email           djaiierht                 learning
 Invalid password        rahulshettyacademy        12344jfa
 Invalid Syntext         £2%?                      learning
-
+valid Login element        ${User_Valid_id}        ${User_valid_pass}
 
 
 *** Keywords ***    
@@ -30,9 +31,9 @@ Validate UnSuccesful Login
     wait until Element is located in the page        ${Error_Message_Login}
     verify error message is correct 
 
-# Validate Cards display in the shopping page
-#     Fill the Loging form    ${User_Valid_id}    ${User_valid_pass}
-#     wait until Element is located in the page    ${Page}
+Validate Cards display in the shopping page
+    Fill the Loging form    ${User_Valid_id}    ${User_valid_pass}
+    wait until Element is located in the page    ${Page}
 
 
 Fill the Loging form
