@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation    To validate the Login form
 Library    SeleniumLibrary
+Library          DataDriver        file=resources/data.csv    encoding=utf_8    dialect=unix
 Test Setup        open the browser with the Mortagage payment url
 Test Teardown        Close Browser
 Resource        resource.robot
 Test Template    Validate UnSuccesful Login 
-Library        DataDriver 
 
 
 *** Variables ***
@@ -14,12 +14,8 @@ ${Page}                       css:.nav-link
 
 
 
-
-*** Test Cases ***      username                  password
-Invalid email           djaiierht                 learning
-Invalid password        rahulshettyacademy        12344jfa
-Invalid Syntext         £2%?                      learning
-valid Login element        ${User_Valid_id}        ${User_valid_pass}
+*** Test Cases ***
+Login with user ${username} and password ${password}    xyz    123456
 
 
 *** Keywords ***    
